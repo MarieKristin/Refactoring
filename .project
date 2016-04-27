@@ -20,4 +20,16 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>easymock-3.4.jar</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/easymock-3.4/easymock-3.4.jar</locationURI>
+		</link>
+		<link>
+			<name>objenesis-2.2.jar</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/objenesis-2.2/objenesis-2.2.jar</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
