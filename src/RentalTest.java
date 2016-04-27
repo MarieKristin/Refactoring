@@ -28,5 +28,29 @@ public class RentalTest {
 		
 		assertThat("Movie should be 'movie'", rental.getMovie(), is(movie));
 	}
+	
+	@Test
+	public void testGetAmount_0() {
+		Movie movie = new Movie("TestMovie", 0);
+		Rental rental = new Rental(movie, 2);
+		
+		assertThat("amount should be 2.0", rental.getAmount(), is(2.0));		
+	}
+	
+	@Test
+	public void testGetAmount_1() {
+		Movie movie = new Movie("TestMovie", 1);
+		Rental rental = new Rental(movie, 2);
+		
+		assertThat("amount should be 6.0", rental.getAmount(), is(6.0));		
+	}
+	
+	@Test
+	public void testGetAmount_2() {
+		Movie movie = new Movie("TestMovie", 2);
+		Rental rental = new Rental(movie, 2);
+		
+		assertThat("amount should be 1.5", rental.getAmount(), is(1.5));		
+	}
 
 }
