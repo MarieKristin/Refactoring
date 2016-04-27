@@ -51,5 +51,31 @@ public class CustomerTest {
 		
 		assertThat("Rental Record for xy\n\tTitle\t\tDays\tAmount\n\tTestMovie\t\t2\t2.0\nAmount owed is 2.0\nYou earned 1 frequent renter points", customer.statement(), is("Rental Record for xy\n\tTitle\t\tDays\tAmount\n\tTestMovie\t\t2\t2.0\nAmount owed is 2.0\nYou earned 1 frequent renter points"));
 	}
-
+	
+	@Test
+	public void testAmountFor_0() {
+		Movie movie = new Movie("TestMovie", 0);
+		Rental rental = new Rental(movie, 2);
+		Customer customer = new Customer("xy");
+		
+		assertThat("amount should be 2.0", customer.amountFor(rental), is(2.0));		
+	}
+	
+	@Test
+	public void testAmountFor_1() {
+		Movie movie = new Movie("TestMovie", 1);
+		Rental rental = new Rental(movie, 2);
+		Customer customer = new Customer("xy");
+		
+		assertThat("amount should be 6.0", customer.amountFor(rental), is(6.0));		
+	}
+	
+	@Test
+	public void testAmountFor_2() {
+		Movie movie = new Movie("TestMovie", 2);
+		Rental rental = new Rental(movie, 2);
+		Customer customer = new Customer("xy");
+		
+		assertThat("amount should be 1.5", customer.amountFor(rental), is(1.5));		
+	}
 }
