@@ -11,8 +11,4 @@ public class RegularPrice extends Price {
 		else
 			return 2.0;
 	}
-
-	public int getFrequentRenterPoints(int daysrented) {
-		return 1;
-	}
 }

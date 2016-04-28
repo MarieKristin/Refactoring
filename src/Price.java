@@ -4,5 +4,7 @@ abstract class Price {
 
 	abstract double getAmount(int daysrented);
 
-	abstract int getFrequentRenterPoints(int daysrented);
+	public int getFrequentRenterPoints(int daysrented) {
+		return 1;
+	}
 }
