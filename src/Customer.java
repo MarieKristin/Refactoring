@@ -52,4 +52,9 @@ class Customer {
     	
     	return totalAmount;
     }
+    
+    public double amountFor(Rental each) {
+    	return each.getAmount();
+
+    }
 }    
