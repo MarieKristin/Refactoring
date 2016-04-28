@@ -67,7 +67,7 @@ public class CustomerTest {
 		Rental rental = new Rental(movie, 2);
 		Customer customer = new Customer("xy");
 		
-		assertThat("amount should be 2.0", customer.amountFor(rental), is(2.0));		
+		assertThat("amount should be 6.0", customer.amountFor(rental), is(6.0));		
 	}
 	
 	@Test
@@ -76,6 +76,6 @@ public class CustomerTest {
 		Rental rental = new Rental(movie, 2);
 		Customer customer = new Customer("xy");
 		
-		assertThat("amount should be 2.0", customer.amountFor(rental), is(2.0));		
+		assertThat("amount should be 1.5", customer.amountFor(rental), is(1.5));		
 	}
 }

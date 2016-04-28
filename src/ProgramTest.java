@@ -15,7 +15,7 @@ public class ProgramTest {
 		String[] args = {"",""};
 		Program.main(args);
 		
-		assertEquals("Welcome to the Movie Store\nLet's get the Statement\nRental Record for joe\n\tTitle\t\tDays\tAmount\n\tmovie1\t\t10\t14.0\n\tmovie2\t\t5\t6.5\nAmount owed is 20.5\nYou earned 2 frequent renter points\n", systemOutRule.getLogWithNormalizedLineSeparator());
+		assertEquals("Welcome to the Movie Store\nLet's get the Statement\nRental Record for joe\n\tTitle\t\tDays\tAmount\n\tmovie1\t\t10\t30.0\n\tmovie2\t\t5\t4.5\nAmount owed is 34.5\nYou earned 3 frequent renter points\n", systemOutRule.getLogWithNormalizedLineSeparator());
 	}
 
 }
