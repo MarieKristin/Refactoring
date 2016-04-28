@@ -8,7 +8,7 @@ public class RentalTest {
 	public void testRental() {
 		Movie movie = new Movie("TestMovie", 0);
 		Rental rental = new Rental(movie, 5);
-		
+
 		assertThat("Movie should be 'movie'", rental.getMovie(), is(movie));
 		assertThat("DaysRented should be 5", rental.getDaysRented(), is(5));
 	}
@@ -17,7 +17,7 @@ public class RentalTest {
 	public void testGetDaysRented() {
 		Movie movie = new Movie("TestMovie", 0);
 		Rental rental = new Rental(movie, 5);
-		
+
 		assertThat("DaysRented should be 5", rental.getDaysRented(), is(5));
 	}
 
@@ -25,7 +25,7 @@ public class RentalTest {
 	public void testGetMovie() {
 		Movie movie = new Movie("TestMovie", 0);
 		Rental rental = new Rental(movie, 5);
-		
+
 		assertThat("Movie should be 'movie'", rental.getMovie(), is(movie));
 	}
 
