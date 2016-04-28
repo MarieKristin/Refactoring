@@ -14,6 +14,26 @@ public class Movie {
     public void setPriceCode(int arg) {
         priceCode = arg;
     }
+    
+    public double getAmount(int daysrented) {
+    	double resultAmount = 0;
+        switch (this.getPriceCode()) {
+            case REGULAR:
+                resultAmount += 2;
+                if (daysrented > 2)
+                    resultAmount += (daysrented - 2) * 1.5;
+                break;
+            case NEW_RELEASE:
+                resultAmount += daysrented * 3;
+                break;
+            case CHILDRENS:
+                resultAmount += 1.5;
+                if (daysrented > 3)
+                    resultAmount += (daysrented - 3) * 1.5;
+                break;
+        }
+        return resultAmount;
+    }
     public String getTitle (){
         return title;
     };
